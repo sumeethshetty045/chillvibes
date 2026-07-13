@@ -1,0 +1,501 @@
+<!--
+============================================================================
+  CHILL VIBES — OUTDOOR BAR & EVENTS
+  Static single-page website (HTML + CSS + vanilla JavaScript, no backend)
+  ----------------------------------------------------------------------------
+  FILE STRUCTURE
+    site/
+    ├── index.html      ← this file — page structure & content
+    ├── style.css       ← all visual styling (warm dark-brown moody theme)
+    ├── script.js       ← menu rendering, scroll effects, form handling
+    ├── README.md       ← quick usage guide
+    └── images/
+        ├── logo.png              (Chill Vibes brand logo)
+        ├── menu/                 (photo for each of the 30 mocktails)
+        └── gallery/  ← create this folder and drop your own photos in
+
+  HOW TO EDIT
+    • Content (text) → edit this file
+    • Colors / fonts / spacing → edit style.css
+    • Menu items / photos → edit MENU_CATEGORIES array in script.js
+    • Contact info → search "CONTACT DETAILS" below in this file
+============================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title shown in the browser tab -->
+  <title>Chill Vibes — Outdoor Bar & Events</title>
+
+  <!-- SEO / social preview description -->
+  <meta name="description" content="Chill Vibes — an outdoor bar built for events. Signature mocktails, warm ambience, unforgettable nights." />
+
+  <!-- Small icon that appears in the browser tab -->
+  <link rel="icon" href="images/logo.png" />
+
+  <!-- Google Fonts:
+       Outfit       → headings & buttons (modern, geometric)
+       Manrope      → body text (clean, readable)
+       Dancing Script → decorative script accents ("Welcome to", "since 2021", etc.) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Manrope:wght@300;400;500;600&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- Our own stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ================================================================
+       GLOBAL WATERMARK
+       A very faint version of the logo pinned to the bottom-right of the
+       viewport, sitting BEHIND everything. Adds atmosphere without
+       distracting from content.
+       ================================================================ -->
+  <div class="watermark" aria-hidden="true">
+    <img src="images/logo.png" alt="" />
+  </div>
+
+
+  <!-- ================================================================
+       HEADER (fixed at the top of the page)
+       Contains: logo + navigation links + "Book Event" CTA button
+       Turns into a compact blurred bar once the user scrolls down.
+       ================================================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-row">
+
+      <!-- Brand: logo image + "Chill Vibes" text -->
+      <a href="#top" class="brand" data-testid="brand-logo">
+        <img src="images/logo.png" alt="Chill Vibes" class="brand-logo-img" />
+        <span class="brand-text">
+          <span class="brand-script">Chill</span>
+          <span class="brand-mark">VIBES</span>
+        </span>
+      </a>
+
+      <!-- Desktop navigation (hidden on mobile) -->
+      <nav class="nav-links" id="navLinks">
+        <a href="#about"    data-testid="nav-about">About</a>
+        <a href="#menu"     data-testid="nav-menu">Menu</a>
+        <a href="#gallery"  data-testid="nav-gallery">Gallery</a>
+        <a href="#enquiry"  data-testid="nav-enquiry">Enquiry</a>
+        <a href="#contact"  data-testid="nav-contact">Contact</a>
+      </nav>
+
+      <!-- Primary CTA in the header (jumps to the enquiry form) -->
+      <a href="#enquiry" class="btn btn-amber btn-sm nav-cta" data-testid="header-enquire-btn">Book Event</a>
+
+      <!-- Hamburger toggle (only visible on mobile) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" data-testid="mobile-menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <!-- ================================================================
+       HERO SECTION (first full-screen view when the site opens)
+       Layers: background photo → dark overlay → giant faint logo → text
+       ================================================================ -->
+  <section class="hero" id="top" data-testid="hero-section">
+    <div class="hero-bg"></div>       <!-- background photo layer -->
+    <div class="hero-overlay"></div>  <!-- dark tint on top of the photo -->
+
+    <!-- Big glowing Chill Vibes logo sitting behind the hero text -->
+    <div class="hero-logo-bg">
+      <img src="images/logo.png" alt="" />
+    </div>
+
+    <div class="container hero-inner">
+      <p class="script accent-amber glow-amber reveal">Welcome to</p>
+
+      <!-- Main site title -->
+      <h1 class="hero-title reveal" style="transition-delay:.1s" data-testid="hero-title">
+        Chill <span class="accent-amber glow-amber">Vibes</span>
+      </h1>
+
+      <!-- Tagline from the original menu book -->
+      <p class="hero-tag reveal" style="transition-delay:.15s">Taste chill. Feel the thrill.</p>
+
+      <!-- Short intro paragraph -->
+      <p class="hero-sub reveal" style="transition-delay:.25s">
+        An outdoor bar built for nights that don't end when the sun does. Signature mocktails,
+        warm ambience, and event experiences that stay with you.
+      </p>
+
+      <!-- Two call-to-action buttons -->
+      <div class="hero-ctas reveal" style="transition-delay:.35s">
+        <a href="#enquiry" class="btn btn-amber" data-testid="hero-enquire-btn">Plan Your Event →</a>
+        <a href="#menu"    class="btn btn-ghost" data-testid="hero-menu-btn">View Menu</a>
+      </div>
+
+      <!-- Small stat row -->
+      <div class="hero-stats reveal" style="transition-delay:.45s">
+        <div><span class="accent-amber">50+</span> Signature Pours</div>
+        <div><span class="accent-copper">Open</span> Air Venue</div>
+        <div><span class="accent-amber">Events</span> · Weddings · Corporates · After Parties</div>
+      </div>
+    </div>
+
+    <!-- Thin animated line at the bottom of the hero, hints "scroll down" -->
+    <div class="scroll-cue"></div>
+  </section>
+
+
+  <!-- ================================================================
+       ABOUT SECTION
+       Two-column layout: photo on the left, story on the right.
+       ================================================================ -->
+  <section class="about" id="about" data-testid="about-section">
+    <div class="container about-grid">
+
+      <!-- Left: photo of the bar (swap URL to your own photo when ready) -->
+      <div class="about-media reveal">
+        <img src="https://images.unsplash.com/photo-1742650184160-20526612b025?crop=entropy&cs=srgb&fm=jpg&w=1200&q=85" alt="Chill Vibes ambience" />
+        <div class="about-badge">
+          <span class="script">since</span>
+          <strong>2021</strong>
+        </div>
+      </div>
+
+      <!-- Right: text content -->
+      <div class="about-copy reveal" style="transition-delay:.15s">
+        <p class="script accent-amber glow-amber">About the Vibe</p>
+        <h2>Open sky.<br /><span class="accent-amber">Slow evenings.</span><br />Loud memories.</h2>
+        <div class="rule"></div>
+        <p>
+          Chill Vibes is an outdoor bar built for gatherings — birthdays under fairy lights,
+          corporate mixers with a skyline view, weddings that spill into the night. We craft
+          over thirty signature mocktails, curate the sound, and dress the space so all you
+          have to do is show up and stay a while.
+        </p>
+        <div class="about-features">
+          <div><span class="script accent-amber">Private</span><small>Bookings</small></div>
+          <div><span class="script accent-amber">Custom</span><small>Menus</small></div>
+          <div><span class="script accent-amber">Live</span><small>Music Nights</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       HIGHLIGHTS SECTION
+       Three cards calling out what makes Chill Vibes stand out:
+       counters, equipment, bartenders.
+       ================================================================ -->
+  <section class="highlights" id="highlights" data-testid="highlights-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="script accent-amber glow-amber">What we bring</p>
+        <h2>Best in Class</h2>
+        <p class="section-sub">Every element of your night is dialled in — from the counter you're leaning on to the person mixing your drink.</p>
+      </div>
+
+      <div class="highlights-grid">
+
+        <!-- Card 1 — Counters -->
+        <div class="highlight-card reveal" data-testid="highlight-counters">
+          <div class="h-icon">▢</div>
+          <h3>Premium Counters</h3>
+          <p>Elegant, spacious bar counters built for movement and moments — designed to be the heart of your event, not just the edge of it.</p>
+        </div>
+
+        <!-- Card 2 — Equipment -->
+        <div class="highlight-card reveal" style="transition-delay:.1s" data-testid="highlight-equipment">
+          <div class="h-icon">✦</div>
+          <h3>Best-in-class Equipment</h3>
+          <p>Professional-grade bar tools, shakers, chillers, and glassware. Every pour is precise, every temperature is exact, every detail is deliberate.</p>
+        </div>
+
+        <!-- Card 3 — Bartenders -->
+        <div class="highlight-card reveal" style="transition-delay:.2s" data-testid="highlight-bartenders">
+          <div class="h-icon">✺</div>
+          <h3>Skilled Bartenders</h3>
+          <p>Skilled, trained, and quietly theatrical. Our bartenders don't just serve — they craft, converse, and turn a drink into an experience.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       MENU SECTION
+       The category headers and drink cards are generated dynamically
+       by script.js from the MENU_CATEGORIES data array.
+       To edit menu items or their photos → open script.js.
+       ================================================================ -->
+  <section class="menu" id="menu" data-testid="menu-section">
+    <div class="menu-divider"></div>
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="script accent-copper glow-amber">The Pour List</p>
+        <h2>The Menu</h2>
+        <p class="section-sub">Every glass is crafted in-house — thirty signature mocktails, alcohol-free, ice-cold, and made with intention.</p>
+      </div>
+
+      <!-- ↓↓↓ script.js renders all menu categories and item cards INSIDE this div ↓↓↓ -->
+      <div id="menuCategories" class="menu-wrapper"></div>
+
+      <p class="menu-foot reveal">Menu is seasonal. Ask our bartender for the special of the night — or let us design a custom pour list for your event.</p>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       GALLERY SECTION
+       6-tile bento grid. Every tile currently uses a stock photo.
+       Hovering a tile shows a "Swap with your photo" overlay so you
+       remember these are placeholders.
+
+       HOW TO REPLACE WITH YOUR OWN PHOTOS
+         1. Create a folder:  site/images/gallery/
+         2. Drop your photos in it (e.g. night1.jpg, party2.jpg …)
+         3. Change each <img src="…"> below to:  src="images/gallery/night1.jpg"
+       ================================================================ -->
+  <section class="gallery" id="gallery" data-testid="gallery-section">
+    <div class="container">
+
+      <div class="gallery-head reveal">
+        <div>
+          <p class="script accent-amber glow-amber">In the moment</p>
+          <h2>Gallery</h2>
+        </div>
+        <p class="gallery-note">A peek at nights past. Hover any tile — every slot is ready to be swapped with your own photos.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Tile 1 (big — takes 2 columns × 2 rows) -->
+        <div class="tile tile-big" data-testid="gallery-tile-0">
+          <img src="D:\webiste files\site\gallery\main profile images 1.jpeg"" alt="Placeholder — swap with your bar shot" />
+          <div class="tile-overlay">TEAM CHILL VIBES</div>
+        </div>
+
+        <!-- Tile 2 -->
+        <div class="tile" data-testid="gallery-tile-1">
+          <img src="D:\webiste files\site\gallery\main profile images 2.jpeg"" alt="Placeholder" />
+          <div class="tile-overlay">Lovely Guest </div>
+        </div>
+
+        <!-- Tile 3 -->
+        <div class="tile" data-testid="gallery-tile-2">
+          <img src="D:\webiste files\site\gallery\main profile images 3.jpeg"" alt="Placeholder" />
+		  <div class="tile-overlay">Sagar alva</div>
+        </div>
+
+        <!-- Tile 4 (wide — takes 2 columns) -->
+        <div class="tile tile-wide" data-testid="gallery-tile-3">
+          <img src="D:\webiste files\site\gallery\g1.jpeg" alt="Placeholder" />
+		  <div class="tile-overlay">events and arrrangements</div>
+        </div>
+
+        <!-- Tile 5 -->
+        <div class="tile" data-testid="gallery-tile-4">
+          <img src="D:\webiste files\site\gallery\g2.jpeg" alt="Placeholder" />
+		  <div class="tile-overlay">Flair shows</div>
+        </div>
+
+        <!-- Tile 6 -->
+        <div class="tile" data-testid="gallery-tile-5">
+          <img src="D:\webiste files\site\gallery\p1.jpeg" alt="Placeholder" />
+		  <div class="tile-overlay">custom Menu</div>
+        </div>
+      </div>
+	  
+
+
+      <p class="gallery-hint reveal">"Memories fade ,but the moments captured here stay timeless."</p>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       ENQUIRY SECTION
+       A simple event-enquiry form. When submitted it opens the user's
+       email client with a pre-filled message to you (mailto: link).
+       No backend server needed. The recipient address is set in
+       script.js  →  const OWNER_EMAIL = '…'
+       ================================================================ -->
+  <section class="enquiry" id="enquiry" data-testid="enquiry-section">
+    <div class="enquiry-glow"></div>
+    <div class="container enquiry-inner">
+
+      <div class="section-head reveal">
+        <p class="script accent-copper glow-amber">Plan with us</p>
+        <h2>Event Enquiry</h2>
+        <p class="section-sub">Tell us about your night. We'll get back within 24 hours with a proposal, menu, and pricing.</p>
+      </div>
+
+      <form class="enquiry-form reveal" id="enquiryForm" data-testid="enquiry-form" autocomplete="off">
+
+        <!-- Row 1: name + phone -->
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Full name*</label>
+            <input id="name" name="name" type="text" required placeholder="Your name" data-testid="enquiry-name" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone*</label>
+            <input id="phone" name="phone" type="tel" required placeholder="+91 98xxxxxxxx" data-testid="enquiry-phone" />
+          </div>
+        </div>
+
+        <!-- Row 2: email -->
+        <div class="field">
+          <label for="email">Email*</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" data-testid="enquiry-email" />
+        </div>
+
+        <!-- Row 3: date, guests, event type -->
+        <div class="form-row form-row-3">
+          <div class="field">
+            <label for="event_date">Event date*</label>
+            <input id="event_date" name="event_date" type="date" required data-testid="enquiry-date" />
+          </div>
+          <div class="field">
+            <label for="guests">Guests*</label>
+            <input id="guests" name="guests" type="number" min="1" required placeholder="50" data-testid="enquiry-guests" />
+          </div>
+          <div class="field">
+            <label for="event_type">Event type*</label>
+            <select id="event_type" name="event_type" required data-testid="enquiry-type">
+              <option value="">Select</option>
+              <option>Birthday</option>
+              <option>Wedding / Reception</option>
+              <option>Corporate / Team Event</option>
+              <option>Anniversary</option>
+              <option>Cocktail Evening</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Row 4: message -->
+        <div class="field">
+          <label for="message">Tell us more</label>
+          <textarea id="message" name="message" rows="4" placeholder="Vibe, timing, any specials..." data-testid="enquiry-message"></textarea>
+        </div>
+
+        <!-- Submit button (JS opens email client with the prefilled details) -->
+        <button type="submit" class="btn btn-amber btn-block" data-testid="enquiry-submit">Send Enquiry →</button>
+
+        <!-- Live message area (JS writes success / error text here) -->
+        <p class="form-note" id="formNote" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       CONTACT SECTION
+       ----------------------------------------------------------------
+       FILL IN YOUR OWN INFO
+         • Phone   → edit  href="tel:…"  AND  the text between the tags
+         • Email   → edit  href="mailto:…"  AND  the text between the tags
+         • Address → replace  "Add your address"  with your actual address
+         • Insta   → edit  href="https://instagram.com/…"  AND the text
+       ================================================================ -->
+  <section class="contact" id="contact" data-testid="contact-section">
+    <div class="container">
+
+      <div class="section-head reveal">
+        <p class="script accent-amber glow-amber">Come say hi</p>
+        <h2>Contact</h2>
+      </div>
+
+      <div class="contact-grid-3">
+       <!-- CARD 1: Whatsapp -->
+        <div class="contact-card reveal" style="transition-delay:.15s" data-testid="contact-address">
+          <div class="c-icon-lg">◈</div>
+          <p class="c-label">Whatsapp</p>
+		  <a  href="https://wa.me/917349516845?text=Hi%20Chill%20Vibes%2C%20I%27d%20like%20to%20book%20an%20event" target="_blank" rel="noreferrer"<class="c-value">Sagar G Alva : +917349516845</a
+         <b> <b><span class="c-value">Dm us</span></b></B>
+        </div>
+
+        <!-- CARD 1: PHONE -->
+        <div class="contact-card reveal" data-testid="contact-phone">
+          <div class="c-icon-lg">☏</div>
+          <p class="c-label">Call us</p>
+          <a href="tel:7204115353" class="c-value">Ankith : +917204115353</a>
+		  <a href="tel:9845268766" class="c-value">Rajesh D Shetty :+917204115353</a>
+		  <a href="tel:7349516845" class="c-value">Sagar G Alva :+917349516845</a>
+		  
+
+        </div>
+
+        <!-- CARD 2: EMAIL -->
+        <div class="contact-card reveal" style="transition-delay:.1s" data-testid="contact-email">
+          <div class="c-icon-lg">✉</div>
+          <p class="c-label">Email</p>
+          <a href="mailto:chillvibescocktails@gmail.com" class="c-value">chillvibescocktails@gmail.com</a>
+        </div>
+
+        
+
+        <!-- CARD 4: INSTAGRAM -->
+        <div class="contact-card reveal" style="transition-delay:.2s" data-testid="contact-instagram">
+          <div class="c-icon-lg">◉</div>
+          <p class="c-label">Follow us</p>
+          <a href="https://www.instagram.com/chillvibes.cocktails?igsh=MTZwZm00cG53NmloeQ==" target="_blank" rel="noreferrer" class="c-value">chillvibes.Cocktails</a>
+        </div>
+      </div>
+
+      <p class="contact-foot reveal">
+        For private events, weddings , After party or corporate mixers, use the enquiry form above and we'll craft a proposal for your date.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="site-footer" data-testid="site-footer">
+    <div class="container footer-row">
+      <div class="brand">
+        <img src="images/logo.png" alt="Chill Vibes" class="brand-logo-img brand-logo-sm" />
+        <span class="brand-text">
+          <span class="brand-script">Chill</span>
+          <span class="brand-mark">VIBES</span>
+        </span>
+      </div>
+      <!-- The current year is filled in by script.js -->
+      <p class="foot-copy">© <span id="year"></span> Chill Vibes · Outdoor Bar & Events</p>
+      <a href="#top" class="foot-top" data-testid="footer-back-to-top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <!-- All page behaviour lives in this file -->
+  <script src="script.js"></script>
+
+
+  <!-- ================================================================
+       MENU DETAIL MODAL
+       Hidden by default. When someone clicks a drink card, script.js
+       fills these elements with the drink info and adds class="open".
+       Clicking the backdrop or the × button closes it.
+       ================================================================ -->
+  <div class="menu-modal" id="menuModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="menu-modal-backdrop" data-close="1"></div>
+    <div class="menu-modal-card">
+      <button class="menu-modal-close" data-close="1" aria-label="Close">×</button>
+      <div class="menu-modal-media">
+        <img id="modalImg" src="" alt="" />
+      </div>
+      <div class="menu-modal-body">
+        <span class="menu-modal-num" id="modalNum">No. 00</span>
+        <h3 id="modalName">Drink name</h3>
+        <span class="script" id="modalTagline">what makes it special</span>
+        <div class="menu-modal-rule"></div>
+        <p id="modalDesc">Description…</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
