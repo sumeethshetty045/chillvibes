@@ -56,7 +56,7 @@ const MENU_CATEGORIES = [
         tagline: "Pale pink and elegant.",
         desc: "Lychee, rose, citric acid.",
         full: "Made with lychee juice, rose, and a touch of citric acid — presented in a clear glass showcasing a delicate pale-pink hue from the lychee and rose. Garnished with edible rose buds, fresh lychees, and mint leaves. Floral, elegant, and delicately sweet.\n\nIngredients: Lychee juice · Rose syrup · Citric acid · Mint · Rose buds",
-        img: "images/04_my-valentine.jpeg"
+        img: "images/myvalentinenew.jpg"
       },
       {
         num: 18, name: "Golden Sunset",
