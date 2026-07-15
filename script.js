@@ -49,7 +49,7 @@ const MENU_CATEGORIES = [
         tagline: "Sweet, sharp, cinematic.",
         desc: "Grenadine, pomegranate seeds, ginger ale.",
         full: "Deep red sweetness of grenadine syrup and pomegranate seeds combined with the crisp, spicy carbonation of ginger ale. The pomegranate seeds add bursts of tart flavor and a jewel-like appearance, while the grenadine creates a rich, ruby-red color reminiscent of a vampire's mythical allure. Bubbly, refreshing, and beautifully balanced between sweet and sharp — garnished with pomegranate seeds and a twist of citrus peel.\n\nIngredients: Grenadine syrup · Pomegranate seeds · Ginger ale · Ice · Citrus peel",
-        img: "20_vampire-s-kiss.jpeg"
+        img: "images/20_vampire-s-kiss.jpeg"
       },
       {
         num: 4, name: "My Valentine",
