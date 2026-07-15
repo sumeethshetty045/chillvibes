@@ -42,7 +42,7 @@ const MENU_CATEGORIES = [
         tagline: "Dark, fizzy, mysterious.",
         desc: "Blueberry crush, citric zest, topped with cola.",
         full: "A visually striking, dark-hued mocktail that blends the rich sweetness of blueberry crush with the tangy sharpness of citric acid, balanced perfectly by the fizzy caramel notes of cola on top. The deep purple-blue color from the blueberry crush creates an almost mystical appearance, contrasted by the dark cola layer. Served chilled in a tall glass with ice — an eye-catching, flavorful beverage perfect for a themed party or anyone who loves fruity, sweet, fizzy mocktails.\n\nIngredients: Blueberry crush · Citric acid · Cola · Ice",
-        img: "/images/07_wicked-witch.jpeg"
+        img: "images/07_wicked-witch.jpeg"
       },
       {
         num: 20, name: "Vampire's Kiss",
