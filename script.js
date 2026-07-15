@@ -105,7 +105,7 @@ const MENU_CATEGORIES = [
         tagline: "Refreshing, vibrant, minty.",
         desc: "Watermelon chunks, mint, lime, sparkling water.",
         full: "A refreshing, vibrant pink-red drink served in a tall glass with watermelon chunks, plenty of fresh mint leaves, and slices of lime or lemon — topped with sparkling water for a lively fizz.\n\nIngredients: Watermelon · Mint · Lime · Sparkling water · Ice",
-        img: "images/02_water-melon-mojito.jpeg"
+        img: "images/matermalon_mojitonew"
       },
       {
         num: 14, name: "Blueberry Mojito",
