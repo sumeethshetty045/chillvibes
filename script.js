@@ -49,14 +49,14 @@ const MENU_CATEGORIES = [
         tagline: "Sweet, sharp, cinematic.",
         desc: "Grenadine, pomegranate seeds, ginger ale.",
         full: "Deep red sweetness of grenadine syrup and pomegranate seeds combined with the crisp, spicy carbonation of ginger ale. The pomegranate seeds add bursts of tart flavor and a jewel-like appearance, while the grenadine creates a rich, ruby-red color reminiscent of a vampire's mythical allure. Bubbly, refreshing, and beautifully balanced between sweet and sharp — garnished with pomegranate seeds and a twist of citrus peel.\n\nIngredients: Grenadine syrup · Pomegranate seeds · Ginger ale · Ice · Citrus peel",
-        img: "images/menu/20_vampire-s-kiss.jpeg"
+        img: "images/20_vampire-s-kiss.jpeg"
       },
       {
         num: 4, name: "My Valentine",
         tagline: "Pale pink and elegant.",
         desc: "Lychee, rose, citric acid.",
         full: "Made with lychee juice, rose, and a touch of citric acid — presented in a clear glass showcasing a delicate pale-pink hue from the lychee and rose. Garnished with edible rose buds, fresh lychees, and mint leaves. Floral, elegant, and delicately sweet.\n\nIngredients: Lychee juice · Rose syrup · Citric acid · Mint · Rose buds",
-        img: "images/menu/04_my-valentine.jpeg"
+        img: "images/04_my-valentine.jpeg"
       },
       {
         num: 18, name: "Golden Sunset",
