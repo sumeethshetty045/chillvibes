@@ -63,35 +63,35 @@ const MENU_CATEGORIES = [
         tagline: "A glowing tropical pour.",
         desc: "Pineapple, banana crush, citric zest.",
         full: "Sweet and tangy pineapple juice blended with smooth, creamy banana crush, balanced by a hint of citric acid for a fresh, zesty kick. The vibrant golden-yellow color combines the hues of both fruits, evoking a glowing sunset. Lush texture, tropical burst — served chilled with a pineapple wedge or banana slice.\n\nIngredients: Pineapple juice · Banana crush · Citric acid · Ice",
-        img: "images/menu/18_golden-sunset.jpeg"
+        img: "images/18_golden-sunset.jpeg"
       },
       {
         num: 5, name: "Coastal Cooler",
         tagline: "Beachy summer vibes.",
         desc: "Peach syrup, pineapple, orange.",
         full: "Combines the sweetness of peach syrup with the tropical tang of pineapple juice and the citrusy zing of orange juice. The vibrant orange-peach color makes it visually appealing, evoking a beachy, summer feel. Served chilled in a tall glass with ice, garnished with slices of peach, pineapple chunks, or orange wedges, and sometimes fresh mint.\n\nIngredients: Peach syrup · Pineapple juice · Orange juice · Ice · Mint",
-        img: "images/menu/05_coastal-cooler.jpeg"
+        img: "images/05_coastal-cooler.jpeg"
       },
       {
         num: 28, name: "Dariyanchi Lara",
         tagline: "Ocean-blue, floral, cool.",
         desc: "Lychee, blue curaçao, citric acid.",
         full: "A stunning mocktail crafted with lychee juice, a touch of citric acid for tangy zest, and a splash of blue curaçao syrup that resembles mesmerizing ocean waves. Combines the sweet, floral, tropical flavor of lychee with the citrusy brightness of citric acid — a cool, revitalizing experience reminiscent of a serene seaside escape.\n\nIngredients: Lychee juice · Blue curaçao syrup · Citric acid · Ice",
-        img: "images/menu/28_dariyanchi-lara.jpeg"
+        img: "images/28_dariyanchi-lara.jpeg"
       },
       {
         num: 12, name: "Rasmalai",
         tagline: "Dessert in a glass.",
         desc: "Mango, cream, saffron strands.",
         full: "Captures the essence of the rasmalai dessert by blending ripe, sweet mango juice with luxurious cream and delicate saffron strands. The saffron adds a beautiful golden hue and subtle floral aroma that complements the fruity sweetness. Smooth, indulgently creamy, and thick — garnished with saffron strands or pistachio slivers.\n\nIngredients: Mango juice · Cream · Saffron · Pistachio",
-        img: "images/menu/12_rasmalai.jpeg"
+        img: "images/12_rasmalai.jpeg"
       },
       {
         num: 10, name: "Jack Frost",
         tagline: "Frothy purple velvet.",
         desc: "Lychee & blackcurrant crush, shaken to a frothy velvet.",
         full: "Combines the sweet floral notes of lychee juice with the deep, tart flavor of blackcurrant crush, brightened by citric acid. Shaken vigorously to create a creamy, frothy texture with a rich purple hue. Smooth and velvety — served chilled in a cocktail glass and garnished with lychee, blackcurrants, or fresh mint.\n\nIngredients: Lychee juice · Blackcurrant crush · Citric acid · Ice",
-        img: "images/menu/10_jack-frost.jpeg"
+        img: "images/10_jack-frost.jpeg"
       },
     ],
   },
@@ -105,63 +105,63 @@ const MENU_CATEGORIES = [
         tagline: "Refreshing, vibrant, minty.",
         desc: "Watermelon chunks, mint, lime, sparkling water.",
         full: "A refreshing, vibrant pink-red drink served in a tall glass with watermelon chunks, plenty of fresh mint leaves, and slices of lime or lemon — topped with sparkling water for a lively fizz.\n\nIngredients: Watermelon · Mint · Lime · Sparkling water · Ice",
-        img: "images/menu/02_water-melon-mojito.jpeg"
+        img: "images/02_water-melon-mojito.jpeg"
       },
       {
         num: 14, name: "Blueberry Mojito",
         tagline: "Colorful & summery.",
         desc: "Muddled blueberries, lime, mint, soda.",
         full: "Muddled fresh blueberries release a bright purple juice, blended with the sharp tang of freshly-squeezed lime and refreshing mint leaves. Lightly sweetened, served over ice, then topped with soda water for a bubbly finish. Garnished with additional blueberries, lime slices, and mint sprigs.\n\nIngredients: Blueberries · Lime · Mint · Sugar · Soda water",
-        img: "images/menu/14_blueberry-mojito.jpeg"
+        img: "images/14_blueberry-mojito.jpeg"
       },
       {
         num: 15, name: "Cucumber Fizz",
         tagline: "Crisp, floral, elegant.",
         desc: "Cucumber, lime, elderflower, sparkling top.",
         full: "Fresh cucumber juice blended with lime juice and elderflower syrup for a floral sweetness, topped with sparkling soda. Served in a tall glass with ice and garnished with cucumber ribbons, lime slices, and sometimes edible flowers or fresh mint. Cool, crisp, and elegantly flavorful.\n\nIngredients: Cucumber · Lime · Elderflower syrup · Sparkling soda",
-        img: "images/menu/15_cucumber-fizz.jpeg"
+        img: "images/15_cucumber-fizz.jpeg"
       },
       {
         num: 6, name: "Kiwi Cooler",
         tagline: "Bright green, tangy, tropical.",
         desc: "Crushed kiwi, pineapple, mint.",
         full: "Tangy, sweet kiwi blended with the tropical sweetness of pineapple juice. Served chilled in a tall glass over ice, garnished with slices of kiwi and pineapple, and sometimes fresh mint leaves. The kiwi is muddled to release its vibrant flavor and texture.\n\nIngredients: Kiwi · Pineapple juice · Mint · Ice",
-        img: "images/menu/06_kiwi-cooler.jpeg"
+        img: "images/06_kiwi-cooler.jpeg"
       },
       {
         num: 25, name: "Peach Ice Tea",
         tagline: "Hydrating, lightly sweet.",
         desc: "Cold-brewed tea, peach slices.",
         full: "Brewed black or green tea infused with real peach slices or peach syrup, sometimes lightly sweetened with sugar or honey. Served chilled over ice and garnished with fresh peach slices, mint, or lemon. Combines the smoothness of tea with the juicy sweetness of peach.\n\nIngredients: Tea · Peach · Honey · Ice · Mint / Lemon",
-        img: "images/menu/25_peach-ice-tea.jpeg"
+        img: "images/25_peach-ice-tea.jpeg"
       },
       {
         num: 24, name: "Virgin Mojito",
         tagline: "The classic, refreshed.",
         desc: "Lime, mint, sugar, soda.",
         full: "Captures the classic flavours of a traditional mojito without any alcohol — fresh lime juice, muddled mint, a light sweetener, and sparkling water or soda over ice. Bright, aromatic, and thoroughly refreshing.\n\nIngredients: Lime · Mint · Sugar / Honey · Soda water · Ice",
-        img: "images/menu/24_virgin-mojito.jpeg"
+        img: "images/24_virgin-mojito.jpeg"
       },
       {
         num: 26, name: "Strawberry Daiquiri",
         tagline: "Slushy summer treat.",
         desc: "Blended strawberries, lime.",
         full: "A refreshing, non-alcoholic version of the classic — fresh or frozen strawberries blended with lime juice and a light sweetener. Instead of rum, we use lemon-lime soda or sparkling water for fizz. Blended with ice to a smooth, slushy consistency and garnished with fresh strawberry slices and a lime wedge.\n\nIngredients: Strawberries · Lime · Sugar syrup · Lemon-lime soda · Ice",
-        img: "images/menu/26_strawberry-daiquiri.jpeg"
+        img: "images/26_strawberry-daiquiri.jpeg"
       },
       {
         num: 29, name: "Passionate Apple",
         tagline: "Fruity, exotic, invigorating.",
         desc: "Apple juice, passionfruit syrup, citric lift.",
         full: "Crisp apple juice blended with sweet and tangy passionfruit syrup, balanced with a hint of citric acid for a lively, refreshing zest. Harmonious fusion of the natural sweetness of apple and the exotic tropical notes of passionfruit — bright, invigorating, and perfect for any season.\n\nIngredients: Apple juice · Passionfruit syrup · Citric acid · Ice",
-        img: "images/menu/29_passionate-apple.jpeg"
+        img: "images/29_passionate-apple.jpeg"
       },
       {
         num: 30, name: "Pineapple Bliss",
         tagline: "Bright tropical escape.",
         desc: "Pineapple, passionfruit, citrus.",
         full: "Sweet and tangy pineapple juice blended with vibrant passionfruit syrup, balanced with a touch of citric acid for a zesty kick. Tropical-inspired, refreshing, promising a burst of sunshine in every sip.\n\nIngredients: Pineapple juice · Passionfruit syrup · Citric acid · Ice",
-        img: "images/menu/30_pineapple-bliss.jpeg"
+        img: "images/30_pineapple-bliss.jpeg"
       },
     ],
   },
@@ -175,49 +175,49 @@ const MENU_CATEGORIES = [
         tagline: "Cooling summer classic.",
         desc: "Raw mango, roasted cumin, black salt, mint.",
         full: "Made by boiling raw green mangoes and blending their pulp with sugar or jaggery, roasted cumin powder, black salt, and fresh mint. Diluted with chilled or sparkling water, shaken well, served over ice. Vibrant yellow-green with a balance of sweet, sour, and salty flavors wrapped in earthy spices. A nutrient-rich mocktail that refreshes, hydrates, and aids digestion during hot summers.\n\nIngredients: Raw mango pulp · Jaggery / Sugar · Roasted cumin · Black salt · Mint · Water",
-        img: "images/menu/17_amm-panna.jpeg"
+        img: "images/17_amm-panna.jpeg"
       },
       {
         num: 3, name: "Cumin Spice",
         tagline: "Earthy, tangy, cooling.",
         desc: "Cumin, mint, tamarind, lime — topped with cola.",
         full: "An earthy, tangy mocktail similar to Indian summer classics like jaljeera. Amber to light-green in color due to the combination of cumin, mint, tamarind, and lime — topped with cola for a fizzy finish. Garnished with fresh mint leaves, lemon slices, and a light sprinkle of cumin powder.\n\nIngredients: Cumin powder · Mint · Tamarind · Lime · Cola · Ice",
-        img: "images/menu/03_cumin-spice.jpeg"
+        img: "images/03_cumin-spice.jpeg"
       },
       {
         num: 13, name: "Rasiila Aam",
         tagline: "Floral mango charmer.",
         desc: "Ripe mango, rose syrup, citric zing.",
         full: "Tropical sweetness of ripe mango juice combined with the floral and aromatic notes of rose syrup, balanced by the tangy zest of citric acid. Vibrant orange-pink color, smooth texture, served chilled over ice. Cooling and thirst-quenching with a beautiful, inviting appearance.\n\nIngredients: Ripe mango juice · Rose syrup · Citric acid · Ice",
-        img: "images/menu/13_rasiila-amm.jpeg"
+        img: "images/13_rasiila-amm.jpeg"
       },
       {
         num: 11, name: "Spiced Tamarind Punch",
         tagline: "Sweet, tangy, a hint of heat.",
         desc: "Pineapple, tamarind, a whisper of Tabasco.",
         full: "Pineapple juice blended with tamarind sauce for a unique balance of sweet and tangy, while Tabasco adds a spicy heat that elevates the drink's complexity. Shaken well and served chilled over ice — deep reddish-brown from the tamarind, bright from the pineapple. Garnished with lime wedges and mint.\n\nIngredients: Pineapple juice · Tamarind · Tabasco · Lime · Mint · Ice",
-        img: "images/menu/11_spiced-tamarind-punch.jpeg"
+        img: "images/11_spiced-tamarind-punch.jpeg"
       },
       {
         num: 19, name: "Ajji Shonti",
         tagline: "Spice-warm, citrus-bright.",
         desc: "Fresh ginger, lime, sparkling water.",
         full: "Spicy warmth of fresh ginger syrup with the bright, citrusy tang of lime syrup, topped with sparkling water for a bubbly, crisp texture. Balanced and refreshing — served over ice in a tall glass, garnished with a slice of lime or lime peel, and sometimes a sprig of mint.\n\nIngredients: Ginger syrup · Lime syrup · Sparkling water · Ice · Mint",
-        img: "images/menu/19_ajji-shonti.jpeg"
+        img: "images/19_ajji-shonti.jpeg"
       },
       {
         num: 23, name: "Ananthmool",
         tagline: "Ayurvedic and cooling.",
         desc: "Ayurvedic ananthmool root, citric acid, sparkling water.",
         full: "Made from a blend of Ananthmool root extract and citric acid, topped with sparkling water. The Ananthmool root, known for its medicinal and cooling properties in Ayurveda, gives the drink a unique sweet-bitter taste with a soothing herbal aroma. Citric acid adds a tangy zest that balances the natural earthiness of the root.\n\nIngredients: Ananthmool root extract · Citric acid · Sparkling water · Ice",
-        img: "images/menu/23_ananthmool.jpeg"
+        img: "images/23_ananthmool.jpeg"
       },
       {
         num: 22, name: "Spicy Guava",
         tagline: "Bold, tropical, fiery.",
         desc: "Guava juice, Tabasco, chili-lime rim.",
         full: "A bold and flavorful non-alcoholic drink that combines the sweet, tropical essence of guava with a spicy kick from Tabasco. Chilled guava juice as the base, mixed with a few drops of Tabasco for heat and tanginess. The glass is rimmed with chili-lime seasoning, enhancing the spicy experience from the first sip.\n\nIngredients: Guava juice · Tabasco · Chili-lime seasoning · Ice",
-        img: "images/menu/22_spicy-guava.jpeg"
+        img: "images/22_spicy-guava.jpeg"
       },
     ],
   },
@@ -231,42 +231,42 @@ const MENU_CATEGORIES = [
         tagline: "Creamy tropical escape.",
         desc: "Pineapple, coconut cream, blended over ice.",
         full: "Non-alcoholic tropical drink containing pineapple juice, coconut cream or coconut milk, and ice — resulting in a creamy, icy, and sweet beverage. Meant to evoke the flavors of the classic Piña Colada without the rum. Garnished with pineapple wedges, maraschino cherries, or decorative umbrellas for a summery, vacation-like feel.\n\nIngredients: Pineapple juice · Coconut cream · Ice · Cherry",
-        img: "images/menu/21_virgin-pina-coloda.jpeg"
+        img: "images/21_virgin-pina-coloda.jpeg"
       },
       {
         num: 8, name: "Cinderella",
         tagline: "Bright, sweet, celebratory.",
         desc: "Orange, lemon, pineapple, grenadine, sparkling finish.",
         full: "Freshly squeezed orange juice, lemon juice, and pineapple juice, sweetened with grenadine syrup, and topped with sparkling water, ginger ale, or club soda. The grenadine adds a beautiful red hue and sweetness, while the citrus juices provide a bright and zesty flavor. Chilled with ice, garnished with fresh slices of pineapple, orange, and lemon.\n\nIngredients: Orange juice · Lemon juice · Pineapple juice · Grenadine · Sparkling water · Ice",
-        img: "images/menu/08_cinderella.jpeg"
+        img: "images/08_cinderella.jpeg"
       },
       {
         num: 16, name: "Shirley Temple — Twist Edition",
         tagline: "A classic, reinvented.",
         desc: "Pomegranate, ginger syrup, mint, ginger ale.",
         full: "Originally created in the 1930s for the child actress Shirley Temple. Our version brings a refreshing new take: fresh pomegranate seeds add a ruby sparkle and burst of flavor, while a ginger-infused syrup lends warmth and spice. Balanced with cool mint leaves and topped with crisp ginger ale — the perfect harmony of sweet, tangy, and zesty notes.\n\nIngredients: Pomegranate seeds · Ginger syrup · Mint · Ginger ale · Ice",
-        img: "images/menu/16_shirley-temple-twist-edition.jpeg"
+        img: "images/16_shirley-temple-twist-edition.jpeg"
       },
       {
         num: 1, name: "Green Apple Margarita",
         tagline: "Crisp, tart, refreshing.",
         desc: "Green apple, lime, salted rim, sparkling top.",
         full: "Vibrant green color, served in a chilled margarita glass, garnished with a slice of green apple and sometimes a cinnamon stick or salted rim — topped up with sparkling water for a lively finish.\n\nIngredients: Green apple juice · Lime · Salt (rim) · Sparkling water · Ice",
-        img: "images/menu/01_green-apple-margarita.jpeg"
+        img: "images/01_green-apple-margarita.jpeg"
       },
       {
         num: 9, name: "Fruit Punch",
         tagline: "Frothy fruit indulgence.",
         desc: "Guava, mixed fruits, vanilla, strawberry crush.",
         full: "Sweet, tangy notes of guava and mixed fruit juices blended with the smooth creaminess of vanilla ice cream and fresh strawberry crush. Blended to a frothy, silky consistency — refreshing yet indulgent. Served chilled in a tall glass, garnished with fresh strawberries, mint leaves, or fruit slices.\n\nIngredients: Guava juice · Mixed fruit juices · Vanilla ice cream · Strawberry crush · Mint",
-        img: "images/menu/09_fruit-punch.jpeg"
+        img: "images/09_fruit-punch.jpeg"
       },
       {
         num: 27, name: "Virgin Sangria",
         tagline: "Festive, fruity, chilled.",
         desc: "Blueberry, cranberry, chopped apple.",
         full: "A blend of blueberry crush, cranberry juice, and other fruit juices, usually served chilled. Garnished with chopped apple pieces on top for a crisp, fresh texture and burst of natural sweetness. Combines the tartness of cranberry, the subtle sweetness of blueberry, and the fresh crunch of apple.\n\nIngredients: Blueberry crush · Cranberry juice · Mixed fruit juices · Apple · Ice",
-        img: "images/menu/27_virgin-sangria.jpeg"
+        img: "images/27_virgin-sangria.jpeg"
       },
     ],
   },
