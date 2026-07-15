@@ -147,7 +147,7 @@ const MENU_CATEGORIES = [
         tagline: "Slushy summer treat.",
         desc: "Blended strawberries, lime.",
         full: "A refreshing, non-alcoholic version of the classic — fresh or frozen strawberries blended with lime juice and a light sweetener. Instead of rum, we use lemon-lime soda or sparkling water for fizz. Blended with ice to a smooth, slushy consistency and garnished with fresh strawberry slices and a lime wedge.\n\nIngredients: Strawberries · Lime · Sugar syrup · Lemon-lime soda · Ice",
-        img: "images/Strawberry Daiquiri.jpeg"
+        img: "images/Strawberry Daiquiri.jpg"
       },
       {
         num: 29, name: "Passionate Apple",
